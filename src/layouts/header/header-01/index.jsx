@@ -68,7 +68,7 @@ const Header = ({ className }) => {
                                             size="small"
                                             onClick={() => authenticate()}
                                         >
-                                            Wallet connect
+                                            Log In
                                         </Button>
                                     </div>
                                 </div>

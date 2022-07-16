@@ -78,7 +78,7 @@ const TopBarArea = () => {
                                     color="primary-alta"
                                     onClick={() => authenticate()}
                                 >
-                                    Wallet connect
+                                    Log In
                                 </Button>
                             </div>
                         </div>

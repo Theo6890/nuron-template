@@ -23,6 +23,7 @@ const AuthorProfileArea = ({ className, data }) => {
                             <div className="tab-wrapper-one">
                                 <nav className="tab-button-one">
                                     <Nav
+                                        style={{ maxWidth: "650px" }}
                                         className="nav nav-tabs"
                                         id="nav-tab"
                                         role="tablist"

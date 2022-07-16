@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 import clsx from "clsx";
 import Image from "next/image";
 import { ImageType } from "@utils/types";
-import ShareDropdown from "@components/share-dropdown";
 import ShareModal from "@components/modals/share-modal";
 import Anchor from "@ui/anchor";
 
@@ -106,9 +105,6 @@ const AuthorIntroArea = ({ className, space, data }) => {
                                                 <i className="feather-share-2" />
                                             </button>
 
-                                            <div className="count at-follw">
-                                                <ShareDropdown />
-                                            </div>
                                             <Anchor
                                                 path="/edit-profile"
                                                 className="btn at-follw follow-button edit-btn"

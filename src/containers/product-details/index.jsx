@@ -46,6 +46,7 @@ const ProductDetailsArea = ({ space, className, product }) => {
                                 />
                                 <div className="place-bet-area">
                                     <Button
+                                        className="buy-btn"
                                         color="primary-alta"
                                         onClick={handleBidModal}
                                     >

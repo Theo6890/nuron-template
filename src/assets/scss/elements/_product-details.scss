@@ -338,11 +338,16 @@
 
 .rn-bid-details {
     margin-top: 40px;
-
-    .bid-amount {
-        margin-right:12px;
-        font-weight: 500;
-        color: var(--color-primary);
+    .buy-btn{
+        &:hover .bid-amount{
+            color: var(--color-white) !important;
+        }
+        .bid-amount {
+            margin-right:12px;
+            font-weight: 500;
+            color: var(--color-primary);
+        }
+       
     }
 
     .rn-bid-content {

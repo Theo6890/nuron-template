@@ -3,22 +3,12 @@ import PropTypes from "prop-types";
 import Image from "next/image";
 import clsx from "clsx";
 import Anchor from "@ui/anchor";
-import ShareDropdown from "@components/share-dropdown";
 import ProductBid from "@components/product-bid";
 import Button from "@ui/button";
 import { ImageType } from "@utils/types";
 import PlaceBidModal from "@components/modals/placebid-modal";
 
-const Product = ({
-    overlay,
-    title,
-    slug,
-    price,
-    likeCount,
-    image,
-    placeBid,
-    disableShareDropdown,
-}) => {
+const Product = ({ overlay, title, slug, price, image, placeBid }) => {
     const [showBidModal, setShowBidModal] = useState(false);
     const handleBidModal = () => {
         setShowBidModal((prev) => !prev);
@@ -32,7 +22,7 @@ const Product = ({
                     placeBid && "with-placeBid"
                 )}
             >
-                <div className="card-thumbnail">
+                <div className="card-thumbnail mb--30">
                     {image?.src && (
                         <Anchor path={`/product/${slug}`}>
                             <Image
@@ -49,14 +39,10 @@ const Product = ({
                         </Button>
                     )}
                 </div>
-                <div className="product-share-wrapper">
-                    <div className="profile-share" />
-                    {!disableShareDropdown && <ShareDropdown />}
-                </div>
                 <Anchor path={`/product/${slug}`}>
                     <span className="product-name">{title}</span>
                 </Anchor>
-                <ProductBid price={price} likeCount={likeCount} />
+                <ProductBid price={price} />
             </div>
             <PlaceBidModal show={showBidModal} handleModal={handleBidModal} />
         </>
@@ -71,10 +57,8 @@ Product.propTypes = {
         amount: PropTypes.number.isRequired,
         currency: PropTypes.string.isRequired,
     }).isRequired,
-    likeCount: PropTypes.number.isRequired,
     image: ImageType.isRequired,
     placeBid: PropTypes.bool,
-    disableShareDropdown: PropTypes.bool,
 };
 
 Product.defaultProps = {

@@ -79,12 +79,6 @@
 @import "header/one-page";
 @import "header/notification";
 
-/* Blog  */
-
-@import "blog/blog";
-@import "blog/sidebar";
-@import "blog/blog-details";
-
 /* Elements  */
 @import "elements/input-range";
 @import "elements/button";
@@ -93,11 +87,8 @@
 @import "elements/edit-profile";
 @import "elements/accordion";
 @import "elements/section-title";
-@import "elements/banner";
-@import "elements/about";
 @import "elements/service";
 @import "elements/contact-form";
-@import "elements/wallet";
 @import "elements/contact";
 @import "elements/author";
 @import "elements/collection";
@@ -114,12 +105,9 @@
 @import "elements/breadcrumb";
 @import "elements/slider";
 @import "elements/slick";
-@import "elements/countdown";
-@import "elements/coming-soon";
 @import "elements/uploadmodal";
 @import "elements/upload-variants";
 @import "elements/notfound.scss";
 @import "elements/category";
-@import "elements/video";
 @import "elements/subscribe";
 @import "elements/white-version";

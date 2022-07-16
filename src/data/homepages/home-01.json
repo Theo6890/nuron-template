@@ -91,33 +91,9 @@
             ]
         },
         {
-            "section": "live-explore-section",
-            "section_title": {
-                "title": "Live Bidding"
-            }
-        },
-        {
-            "section": "newest-section",
-            "section_title": {
-                "title": "Newest Items"
-            }
-        },
-        {
-            "section": "top-sller-section",
-            "section_title": {
-                "title": "Top Seller in"
-            }
-        },
-        {
             "section": "explore-product-section",
             "section_title": {
                 "title": "Explore Product"
-            }
-        },
-        {
-            "section": "collection-section",
-            "section_title": {
-                "title": "Top Collection"
             }
         }
     ]

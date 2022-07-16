@@ -132,13 +132,23 @@
         "menu": [
             {
                 "id": 1,
+                "text": "Contact Us",
+                "path":"/contact"
+            },
+            {
+                "id": 2,
                 "text": "Terms",
                 "path": "/terms-condition"
             },
             {
-                "id": 2,
+                "id": 3,
                 "text": "Privacy Policy",
                 "path": "/privacy-policy"
+            },
+            {
+                "id": 4,
+                "text": "Support & FAQs",
+                "path": "/support"
             }
         ]
     },

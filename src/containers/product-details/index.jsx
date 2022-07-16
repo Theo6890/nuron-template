@@ -44,16 +44,18 @@ const ProductDetailsArea = ({ space, className, product }) => {
                                     tags={product?.tags}
                                     history={product?.history}
                                 />
-                                <Button
-                                    color="primary-alta"
-                                    className="mt--30"
-                                    onClick={handleBidModal}
-                                >
-                                    Buy{" "}
-                                    <span className="count-number">
-                                        {product.highest_bid.amount}
-                                    </span>
-                                </Button>
+                                <div className="place-bet-area">
+                                    <Button
+                                        color="primary-alta"
+                                        onClick={handleBidModal}
+                                    >
+                                        <span className="bid-amount">
+                                            {product.highest_bid.amount}
+                                        </span>
+                                        Buy{" "}
+                                    </Button>
+                                </div>
+
                                 <PlaceBidModal
                                     show={showBidModal}
                                     handleModal={handleBidModal}

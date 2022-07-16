@@ -339,8 +339,10 @@
 .rn-bid-details {
     margin-top: 40px;
 
-    .count-number {
-        font-size: 14px;
+    .bid-amount {
+        margin-right:12px;
+        font-weight: 500;
+        color: var(--color-primary);
     }
 
     .rn-bid-content {

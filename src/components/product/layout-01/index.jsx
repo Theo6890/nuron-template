@@ -4,7 +4,6 @@ import Image from "next/image";
 import clsx from "clsx";
 import Anchor from "@ui/anchor";
 import ProductBid from "@components/product-bid";
-import Button from "@ui/button";
 import { ImageType } from "@utils/types";
 import PlaceBidModal from "@components/modals/placebid-modal";
 
@@ -32,11 +31,6 @@ const Product = ({ overlay, title, slug, price, image, placeBid }) => {
                                 height={533}
                             />
                         </Anchor>
-                    )}
-                    {placeBid && (
-                        <Button onClick={handleBidModal} size="small">
-                            Place Bid
-                        </Button>
                     )}
                 </div>
                 <Anchor path={`/product/${slug}`}>

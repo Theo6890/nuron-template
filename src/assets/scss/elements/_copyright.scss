@@ -8,7 +8,8 @@
         display: flex;
 
         @media #{$md-layout} {
-            justify-content: center;
+            flex-direction: column;
+            align-items: center;
             margin-bottom: 15px;
         }
 
@@ -66,6 +67,9 @@
                 background: var(--color-border);
                 transform: translateY(-50%);
                 @media #{$sm-layout} {
+                    display: none;
+                }
+                @media #{$md-layout} {
                     display: none;
                 }
             }

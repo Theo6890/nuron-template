@@ -20,21 +20,19 @@ const ActivityArea = ({ space, className, data }) => {
                     <h3 className="title">All following Acivity</h3>
                 </div>
                 <div className="row g-6 activity-direction">
-                    <div className="col-lg-8 mb_dec--15">
-                        {activities?.map((item) => (
-                            <Activity
-                                key={item.id}
-                                image={item.image}
-                                title={item.title}
-                                path={item.slug}
-                                desc={item.description}
-                                time={item.time}
-                                date={item.date}
-                                author={item.author}
-                                status={item.status}
-                            />
-                        ))}
-                    </div>
+                    {activities?.map((item) => (
+                        <Activity
+                            key={item.id}
+                            image={item.image}
+                            title={item.title}
+                            path={item.slug}
+                            desc={item.description}
+                            time={item.time}
+                            date={item.date}
+                            author={item.author}
+                            status={item.status}
+                        />
+                    ))}
                 </div>
             </div>
         </div>

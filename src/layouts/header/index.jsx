@@ -13,8 +13,8 @@ import Anchor from "@ui/anchor";
 import Button from "@ui/button";
 import { useRouter } from "next/router";
 import { useOffcanvas, useSticky, useFlyoutSearch } from "@hooks";
-import headerData from "../../../data/general/header-01.json";
-import menuData from "../../../data/general/menu-01.json";
+import headerData from "../../data/general/header.json";
+import menuData from "../../data/general/menu.json";
 
 const Header = ({ className }) => {
     const sticky = useSticky();

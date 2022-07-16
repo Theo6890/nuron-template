@@ -1,14 +1,14 @@
 import SEO from "@components/seo";
 import Wrapper from "@layout/wrapper";
-import Header from "@layout/header/header-01";
-import Footer from "@layout/footer/footer-01";
+import Header from "@layout/header";
+import Footer from "@layout/footer";
 import HeroArea from "@containers/hero/layout-01";
 import ServiceArea from "@containers/services/layout-01";
 import ExploreProductArea from "@containers/explore-product/layout-01";
 import { normalizedData } from "@utils/methods";
 
 // Demo Data
-import homepageData from "../data/homepages/home-01.json";
+import homepageData from "../data/homepages/home.json";
 import productData from "../data/products.json";
 
 export async function getStaticProps() {

@@ -11,6 +11,7 @@ import ColorSwitcher from "@components/color-switcher";
 import BurgerButton from "@ui/burger-button";
 import Anchor from "@ui/anchor";
 import Button from "@ui/button";
+import { useRouter } from "next/router";
 import { useOffcanvas, useSticky, useFlyoutSearch } from "@hooks";
 import headerData from "../../../data/general/header-01.json";
 import menuData from "../../../data/general/menu-01.json";
@@ -20,6 +21,7 @@ const Header = ({ className }) => {
     const { offcanvas, offcanvasHandler } = useOffcanvas();
     const { search, searchHandler } = useFlyoutSearch();
     const { authenticate, isAuthenticated } = useMoralis();
+    const router = useRouter();
 
     return (
         <>
@@ -66,7 +68,9 @@ const Header = ({ className }) => {
                                             color="primary-alta"
                                             className="connectBtn"
                                             size="small"
-                                            onClick={() => authenticate()}
+                                            onClick={() =>
+                                                router.push("/login")
+                                            }
                                         >
                                             Log In
                                         </Button>

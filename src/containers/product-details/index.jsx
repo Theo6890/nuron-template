@@ -1,11 +1,8 @@
 import PropTypes from "prop-types";
 import clsx from "clsx";
 import Sticky from "@ui/sticky";
-import Button from "@ui/button";
 import GalleryTab from "@components/product-details/gallery-tab";
 import ProductTitle from "@components/product-details/title";
-import ProductCategory from "@components/product-details/category";
-import ProductCollection from "@components/product-details/collection";
 import BidTab from "@components/product-details/bid-tab";
 import PlaceBet from "@components/product-details/place-bet";
 import { ImageType } from "@utils/types";
@@ -33,23 +30,7 @@ const ProductDetailsArea = ({ space, className, product }) => (
                             title={product.title}
                             likeCount={product.likeCount}
                         />
-                        <span className="bid">
-                            Height bid{" "}
-                            <span className="price">
-                                {product.price.amount}
-                                {product.price.currency}
-                            </span>
-                        </span>
                         <h6 className="title-name">#22 Portal , Info bellow</h6>
-                        <div className="catagory-collection">
-                            <ProductCategory owner={product.owner} />
-                            <ProductCollection
-                                collection={product.collection}
-                            />
-                        </div>
-                        <Button color="primary-alta" path="#">
-                            Unlockable content included
-                        </Button>
                         <div className="rn-bid-details">
                             <BidTab
                                 bids={product?.bids}

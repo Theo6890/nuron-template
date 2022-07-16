@@ -5,13 +5,12 @@ import Header from "@layout/header/header-01";
 import Footer from "@layout/footer/footer-01";
 import Breadcrumb from "@components/breadcrumb";
 import ProductDetailsArea from "@containers/product-details";
-import ProductArea from "@containers/product/layout-03";
 import { shuffleArray } from "@utils/methods";
 
 // demo data
 import productData from "../../data/products.json";
 
-const ProductDetails = ({ product, recentViewProducts, relatedProducts }) => (
+const ProductDetails = ({ product }) => (
     <Wrapper>
         <SEO pageTitle="Product Details" />
         <Header />
@@ -21,18 +20,6 @@ const ProductDetails = ({ product, recentViewProducts, relatedProducts }) => (
                 currentPage="Product Details"
             />
             <ProductDetailsArea product={product} />
-            <ProductArea
-                data={{
-                    section_title: { title: "Recent View" },
-                    products: recentViewProducts,
-                }}
-            />
-            <ProductArea
-                data={{
-                    section_title: { title: "Related Item" },
-                    products: relatedProducts,
-                }}
-            />
         </main>
         <Footer />
     </Wrapper>
@@ -68,8 +55,6 @@ export async function getStaticProps({ params }) {
 
 ProductDetails.propTypes = {
     product: PropTypes.shape({}),
-    recentViewProducts: PropTypes.arrayOf(PropTypes.shape({})),
-    relatedProducts: PropTypes.arrayOf(PropTypes.shape({})),
 };
 
 export default ProductDetails;

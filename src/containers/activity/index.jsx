@@ -2,31 +2,10 @@ import { useState } from "react";
 import PropTypes from "prop-types";
 import clsx from "clsx";
 import Activity from "@components/activity";
-import Sticky from "@ui/sticky";
 import { IDType, ImageType } from "@utils/types";
-import { flatDeep } from "@utils/methods";
 
 const ActivityArea = ({ space, className, data }) => {
-    const [activities, setActivities] = useState(data?.activities || []);
-    const marketFilters = [
-        ...new Set(
-            flatDeep(data?.activities.map((activity) => activity.marketFilters))
-        ),
-    ];
-    const userFilters = [
-        ...new Set(
-            flatDeep(data?.activities.map((activity) => activity.userFilters))
-        ),
-    ];
-
-    const filterHandler = (filter) => {
-        const newActivities = data?.activities.filter(
-            (activity) =>
-                activity.marketFilters.includes(filter) ||
-                activity.userFilters.includes(filter)
-        );
-        setActivities(newActivities);
-    };
+    const [activities] = useState(data?.activities || []);
 
     return (
         <div
@@ -55,46 +34,6 @@ const ActivityArea = ({ space, className, data }) => {
                                 status={item.status}
                             />
                         ))}
-                    </div>
-                    <div className="col-lg-4">
-                        <div className="filter-wrapper">
-                            <Sticky top="100px">
-                                <div className="widge-wrapper rbt-sticky-top-adjust">
-                                    <div className="inner">
-                                        <h3>Market filter</h3>
-                                        <div className="sing-filter">
-                                            {marketFilters?.map((item) => (
-                                                <button
-                                                    key={item}
-                                                    type="button"
-                                                    onClick={() =>
-                                                        filterHandler(item)
-                                                    }
-                                                >
-                                                    {item}
-                                                </button>
-                                            ))}
-                                        </div>
-                                    </div>
-                                    <div className="inner">
-                                        <h3>Filter by users</h3>
-                                        <div className="sing-filter">
-                                            {userFilters?.map((item) => (
-                                                <button
-                                                    key={item}
-                                                    onClick={() =>
-                                                        filterHandler(item)
-                                                    }
-                                                    type="button"
-                                                >
-                                                    {item}
-                                                </button>
-                                            ))}
-                                        </div>
-                                    </div>
-                                </div>
-                            </Sticky>
-                        </div>
                     </div>
                 </div>
             </div>

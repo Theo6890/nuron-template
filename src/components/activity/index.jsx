@@ -10,7 +10,6 @@ const Activity = ({
     desc,
     time,
     date,
-    author,
     image,
     status,
 }) => (
@@ -40,10 +39,6 @@ const Activity = ({
                             <span>
                                 {time} on {date}
                             </span>
-                        </div>
-                        <div className="user-area data">
-                            <i className="feather-user" />
-                            <Anchor path={author.slug}>{author.name}</Anchor>
                         </div>
                     </div>
                 </div>

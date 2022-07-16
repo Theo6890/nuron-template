@@ -48,46 +48,11 @@ const LoginForm = ({ className }) => {
                         </ErrorText>
                     )}
                 </div>
-                <div className="mb-5">
-                    <label
-                        htmlFor="exampleInputPassword1"
-                        className="form-label"
-                    >
-                        Password
-                    </label>
-                    <input
-                        type="password"
-                        id="exampleInputPassword1"
-                        {...register("exampleInputPassword1", {
-                            required: "Password is required",
-                        })}
-                    />
-                    {errors.exampleInputPassword1 && (
-                        <ErrorText>
-                            {errors.exampleInputPassword1?.message}
-                        </ErrorText>
-                    )}
+                <div className="d-flex flex-column align-items-center ">
+                    <Button type="submit" size="medium" className="mr--15">
+                        Log In / Sign Up
+                    </Button>
                 </div>
-                <div className="mb-5 rn-check-box">
-                    <input
-                        type="checkbox"
-                        className="rn-check-box-input"
-                        id="exampleCheck1"
-                        {...register("exampleCheck1")}
-                    />
-                    <label
-                        className="rn-check-box-label"
-                        htmlFor="exampleCheck1"
-                    >
-                        Remember me leter
-                    </label>
-                </div>
-                <Button type="submit" size="medium" className="mr--15">
-                    Log In
-                </Button>
-                <Button path="/sign-up" color="primary-alta" size="medium">
-                    Sign Up
-                </Button>
             </form>
         </div>
     );

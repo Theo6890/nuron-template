@@ -26,10 +26,7 @@ const ProductDetailsArea = ({ space, className, product }) => (
                 </div>
                 <div className="col-lg-5 col-md-12 col-sm-12 mt_md--50 mt_sm--60">
                     <div className="rn-pd-content-area">
-                        <ProductTitle
-                            title={product.title}
-                            likeCount={product.likeCount}
-                        />
+                        <ProductTitle title={product.title} />
                         <h6 className="title-name">#22 Portal , Info bellow</h6>
                         <div className="rn-bid-details">
                             <BidTab

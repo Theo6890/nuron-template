@@ -384,6 +384,7 @@
         background: var(--background-color-1);
         border: 1px solid var(--color-border);
         border-radius: 6px;
+        max-width: 330px;
         button {
             width: 150px;
             height: 50px;
@@ -402,9 +403,6 @@
                 color: var(--color-white);
                 border-radius: 5px;
                 border: transparent;
-            }
-            @media #{$laptop-device} {
-                width: 130px;
             }
         }
     }

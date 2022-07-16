@@ -12,7 +12,7 @@ const LoginArea = ({ className, space }) => (
     >
         <div className="container">
             <div className="row">
-                <div className=" offset-2 col-lg-8 col-md-6 ml_md--0 ml_sm--0 col-sm-12">
+                <div style={{ maxWidth: "70%" }} className="mx-auto">
                     <LoginForm />
                 </div>
             </div>

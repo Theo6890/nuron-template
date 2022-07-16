@@ -19,7 +19,7 @@ const Home = () => {
     const content = normalizedData(homepageData?.content || []);
     return (
         <Wrapper>
-            <SEO pageTitle="Home Default" />
+            <SEO pageTitle="Home" />
             <Header />
             <main id="main-content">
                 <HeroArea data={content["hero-section"]} />

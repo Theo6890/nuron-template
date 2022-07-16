@@ -1,52 +1,71 @@
+import { useState } from "react";
 import PropTypes from "prop-types";
 import clsx from "clsx";
 import Sticky from "@ui/sticky";
 import GalleryTab from "@components/product-details/gallery-tab";
+import Button from "@ui/button";
 import ProductTitle from "@components/product-details/title";
 import BidTab from "@components/product-details/bid-tab";
-import PlaceBet from "@components/product-details/place-bet";
 import { ImageType } from "@utils/types";
-
+import PlaceBidModal from "@components/modals/placebid-modal";
 // Demo Image
 
-const ProductDetailsArea = ({ space, className, product }) => (
-    <div
-        className={clsx(
-            "product-details-area",
-            space === 1 && "rn-section-gapTop",
-            className
-        )}
-    >
-        <div className="container">
-            <div className="row g-5">
-                <div className="col-lg-7 col-md-12 col-sm-12">
-                    <Sticky>
-                        <GalleryTab images={product.images} />
-                    </Sticky>
-                </div>
-                <div className="col-lg-5 col-md-12 col-sm-12 mt_md--50 mt_sm--60">
-                    <div className="rn-pd-content-area">
-                        <ProductTitle title={product.title} />
-                        <h6 className="title-name">#22 Portal , Info bellow</h6>
-                        <div className="rn-bid-details">
-                            <BidTab
-                                bids={product?.bids}
-                                owner={product.owner}
-                                properties={product?.properties}
-                                tags={product?.tags}
-                                history={product?.history}
-                            />
-                            <PlaceBet
-                                highest_bid={product.highest_bid}
-                                auction_date={product?.auction_date}
-                            />
+const ProductDetailsArea = ({ space, className, product }) => {
+    const [showBidModal, setShowBidModal] = useState(false);
+    const handleBidModal = () => {
+        setShowBidModal((prev) => !prev);
+    };
+    return (
+        <div
+            className={clsx(
+                "product-details-area",
+                space === 1 && "rn-section-gapTop",
+                className
+            )}
+        >
+            <div className="container">
+                <div className="row g-5">
+                    <div className="col-lg-7 col-md-12 col-sm-12">
+                        <Sticky>
+                            <GalleryTab images={product.images} />
+                        </Sticky>
+                    </div>
+                    <div className="col-lg-5 col-md-12 col-sm-12 mt_md--50 mt_sm--60">
+                        <div className="rn-pd-content-area">
+                            <ProductTitle title={product.title} />
+                            <h6 className="title-name">
+                                #22 Portal , Info bellow
+                            </h6>
+                            <div className="rn-bid-details">
+                                <BidTab
+                                    bids={product?.bids}
+                                    owner={product.owner}
+                                    properties={product?.properties}
+                                    tags={product?.tags}
+                                    history={product?.history}
+                                />
+                                <Button
+                                    color="primary-alta"
+                                    className="mt--30"
+                                    onClick={handleBidModal}
+                                >
+                                    Buy{" "}
+                                    <span className="count-number">
+                                        {product.highest_bid.amount}
+                                    </span>
+                                </Button>
+                                <PlaceBidModal
+                                    show={showBidModal}
+                                    handleModal={handleBidModal}
+                                />
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-);
+    );
+};
 
 ProductDetailsArea.propTypes = {
     space: PropTypes.oneOf([1, 2]),
@@ -64,7 +83,9 @@ ProductDetailsArea.propTypes = {
         properties: PropTypes.arrayOf(PropTypes.shape({})),
         tags: PropTypes.arrayOf(PropTypes.shape({})),
         history: PropTypes.arrayOf(PropTypes.shape({})),
-        highest_bid: PropTypes.shape({}),
+        highest_bid: PropTypes.shape({
+            amount: PropTypes.string,
+        }),
         auction_date: PropTypes.string,
         images: PropTypes.arrayOf(ImageType),
     }),

@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import TopSeller from "@components/top-seller/layout-02";
+import TopSeller from "@components/top-seller";
 import { IDType, ImageType } from "@utils/types";
 
 const HistoryTabContent = ({ history }) => (

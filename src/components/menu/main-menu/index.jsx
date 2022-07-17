@@ -1,8 +1,6 @@
 import PropTypes from "prop-types";
 import Anchor from "@ui/anchor";
 import clsx from "clsx";
-import SubMenu from "./submenu";
-import MegaMenu from "./megamenu";
 
 const MainMenu = ({ menu }) => (
     <ul className="mainmenu">

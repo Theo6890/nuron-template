@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import TopSeller from "@components/top-seller/layout-01";
+import TopSeller from "@components/top-seller";
 import { IDType, ImageType } from "@utils/types";
 
 const DetailsTabContent = ({ owner, properties, tags }) => (

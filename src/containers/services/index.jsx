@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import clsx from "clsx";
-import SectionTitle from "@components/section-title/layout-02";
+import SectionTitle from "@components/section-title";
 import Service from "@components/service";
 import { SectionTitleType, ItemType } from "@utils/types";
 

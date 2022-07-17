@@ -4,7 +4,7 @@ import TabContent from "react-bootstrap/TabContent";
 import TabContainer from "react-bootstrap/TabContainer";
 import TabPane from "react-bootstrap/TabPane";
 import Nav from "react-bootstrap/Nav";
-import Product from "@components/product/layout-01";
+import Product from "@components/product";
 import { ProductType } from "@utils/types";
 import { shuffleArray } from "@utils/methods";
 

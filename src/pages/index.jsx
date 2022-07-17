@@ -2,9 +2,9 @@ import SEO from "@components/seo";
 import Wrapper from "@layout/wrapper";
 import Header from "@layout/header";
 import Footer from "@layout/footer";
-import HeroArea from "@containers/hero/layout-01";
-import ServiceArea from "@containers/services/layout-01";
-import ExploreProductArea from "@containers/explore-product/layout-01";
+import HeroArea from "@containers/hero";
+import ServiceArea from "@containers/services";
+import ExploreProductArea from "@containers/explore-product";
 import { normalizedData } from "@utils/methods";
 
 // Demo Data

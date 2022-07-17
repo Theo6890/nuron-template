@@ -3,7 +3,7 @@ import Wrapper from "@layout/wrapper";
 import Header from "@layout/header";
 import Footer from "@layout/footer";
 import Breadcrumb from "@components/breadcrumb";
-import ServiceArea from "@containers/services/layout-01";
+import ServiceArea from "@containers/services";
 import SupportArea from "@containers/support";
 
 export async function getStaticProps() {

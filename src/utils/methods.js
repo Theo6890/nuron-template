@@ -68,25 +68,25 @@ function slideToggle(element, duration = 500) {
     return slideUp(element, duration);
 }
 
-const flatDeep = (arr, d = 1) =>
-    d > 0
-        ? arr.reduce(
-              (acc, val) =>
-                  acc.concat(Array.isArray(val) ? flatDeep(val, d - 1) : val),
-              []
-          )
-        : arr.slice();
+// const flatDeep = (arr, d = 1) =>
+//     d > 0
+//         ? arr.reduce(
+//               (acc, val) =>
+//                   acc.concat(Array.isArray(val) ? flatDeep(val, d - 1) : val),
+//               []
+//           )
+//         : arr.slice();
 
-function slugify(text) {
-    return text
-        .toString()
-        .toLowerCase()
-        .replace(/\s+/g, "-") // Replace spaces with -
-        .replace(/[^\w-]+/g, "") // Remove all non-word chars
-        .replace(/--+/g, "-") // Replace multiple - with single -
-        .replace(/^-+/, "") // Trim - from start of text
-        .replace(/-+$/, ""); // Trim - from end of text
-}
+// function slugify(text) {
+//     return text
+//         .toString()
+//         .toLowerCase()
+//         .replace(/\s+/g, "-") // Replace spaces with -
+//         .replace(/[^\w-]+/g, "") // Remove all non-word chars
+//         .replace(/--+/g, "-") // Replace multiple - with single -
+//         .replace(/^-+/, "") // Trim - from start of text
+//         .replace(/-+$/, ""); // Trim - from end of text
+// }
 
 function normalizedData(data, key = "section") {
     let allContetnt;
@@ -114,33 +114,33 @@ function normalizedData(data, key = "section") {
     return allContetnt;
 }
 
-const months = [
-    "jan",
-    "feb",
-    "mar",
-    "apr",
-    "may",
-    "jun",
-    "jul",
-    "aug",
-    "sep",
-    "oct",
-    "nov",
-    "dec",
-];
+// const months = [
+//     "jan",
+//     "feb",
+//     "mar",
+//     "apr",
+//     "may",
+//     "jun",
+//     "jul",
+//     "aug",
+//     "sep",
+//     "oct",
+//     "nov",
+//     "dec",
+// ];
 
-const getMonth = (date) => months[date.getMonth()];
+// const getMonth = (date) => months[date.getMonth()];
 
-const containsObject = (obj, list) => {
-    let i;
-    for (i = 0; i < list.length; i++) {
-        if (list[i].slug === obj.slug) {
-            return i;
-        }
-    }
+// const containsObject = (obj, list) => {
+//     let i;
+//     for (i = 0; i < list.length; i++) {
+//         if (list[i].slug === obj.slug) {
+//             return i;
+//         }
+//     }
 
-    return -1;
-};
+//     return -1;
+// };
 
 const shuffleArray = (array) => {
     const newArr = array.slice();
@@ -167,11 +167,7 @@ module.exports = {
     slideUp,
     slideDown,
     slideToggle,
-    flatDeep,
     normalizedData,
-    slugify,
-    getMonth,
-    containsObject,
     shuffleArray,
     hasKey,
     isEmpty,
